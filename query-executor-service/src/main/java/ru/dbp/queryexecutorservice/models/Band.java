@@ -19,8 +19,6 @@ public class Band {
 
     private String name;
     private String genre;
-    private Integer formationYear;
-    private String country;
 
     @OneToMany(mappedBy = "band", cascade = CascadeType.ALL)
     private List<Song> songs;

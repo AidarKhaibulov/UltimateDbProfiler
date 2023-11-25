@@ -16,13 +16,8 @@ public class Song {
     private Long id;
 
     private String title;
-    private String artist;
-    private String album;
-    private String genre;
-    private Integer releaseYear;
     private Integer durationInSeconds;
 
-    @Lob
     private String lyrics;
 
     @ManyToOne
