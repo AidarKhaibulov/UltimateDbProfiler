@@ -16,8 +16,8 @@ public class PostgreSQLPgStatementsProcessorService {
 
     private final PgStatementRepository pgStatementRepository;
 
-    public List<PgStatement> getAll(){
-        List<PgStatement> statements = pgStatementRepository.findAll();
+    public List<PgStatement> getTop5SlowestQueries(){
+        List<PgStatement> statements = pgStatementRepository.findTop5ByOrderByTotalExecTimeDesc();
 
         return statements;
     }

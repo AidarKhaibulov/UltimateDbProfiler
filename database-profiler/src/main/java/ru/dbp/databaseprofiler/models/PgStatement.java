@@ -10,8 +10,8 @@ import lombok.Setter;
 @Setter
 public class PgStatement {
     @Id
-    private Long userid;
-    private String dbid;
+    private String queryid;
     private String query;
+    private Long totalExecTime;
 
 }
