@@ -1,5 +1,6 @@
 package ru.dbp.queryexecutorservice.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,5 +22,6 @@ public class Band {
     private String genre;
 
     @OneToMany(mappedBy = "band", cascade = CascadeType.ALL)
+    @JsonBackReference
     private List<Song> songs;
 }
