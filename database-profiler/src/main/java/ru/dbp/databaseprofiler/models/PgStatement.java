@@ -13,5 +13,5 @@ public class PgStatement {
     private String queryid;
     private String query;
     private Long totalExecTime;
-
+    private Long userid;
 }

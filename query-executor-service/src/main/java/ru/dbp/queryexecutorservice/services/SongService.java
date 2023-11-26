@@ -14,7 +14,6 @@ import java.util.Optional;
 public class SongService {
     private final SongRepository songRepository;
 
-
     public List<Song> getAllSongs() {
         return songRepository.findAll();
     }

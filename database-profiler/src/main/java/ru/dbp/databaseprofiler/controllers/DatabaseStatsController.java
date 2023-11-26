@@ -10,8 +10,8 @@ import ru.dbp.databaseprofiler.services.PostgreSQLPgStatementsProcessorService;
 @RequiredArgsConstructor
 public class DatabaseStatsController {
     private final PostgreSQLPgStatementsProcessorService pgStatementsProcessorService;
-    @GetMapping("/top5")
-    public ResponseEntity<?> getTop5SlowestQueries(){
+    @GetMapping("/getAllQueriesSortedInDesc")
+    public ResponseEntity<?> getAllQueriesSortedInDesc(){
         return ResponseEntity.ok(pgStatementsProcessorService.getTop5SlowestQueries());
     }
 }
